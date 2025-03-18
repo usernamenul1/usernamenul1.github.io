@@ -86,7 +86,11 @@
 
 
   
-<meta name="generator" content="Hexo 7.3.0"></head>
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.3.0"></head>
 
 
 <body>
@@ -277,7 +281,8 @@
             
               <div class="markdown-body">
                 
-                <p>mini模式及桌面歌词除英文歌词外均无法显示; 拖动时有明显异常; 最小化状态右键无汉字显示。</p>
+                <p>mini模式及桌面歌词除英文歌词外均无法显示; 拖动时有明显异常;
+最小化状态右键无汉字显示。</p>
 <p>使用winetricks下载了所有的fonts。尝试更改字体，无明显区别。</p>
 <p>好消息是本人不怎么听歌，纯属心血来潮。选择网易云音乐只是方便同步歌单。</p>
 <p>主界面正常，有可以容忍的卡顿感。音乐播放正常。</p>
@@ -391,6 +396,12 @@
 
 
   
+
+
+  
+  
+
+
 
 
 
@@ -609,6 +620,49 @@
 
 
   <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
 
   <script  src="/js/local-search.js" ></script>
 
