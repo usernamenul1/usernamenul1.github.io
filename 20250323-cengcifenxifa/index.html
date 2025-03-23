@@ -27,7 +27,7 @@
 <meta property="og:description" content="解决评价类问题  评价的目标 可选的方案 评价的指标  背景资料 常识 上网查文献      标度 含义     1 同等重要   3 稍微重要   5 明显重要   7 强烈重要   9 极端重要   2, 4, 6, 8 上述的中值   倒数 上述反过来    一致矩阵 \[ a_{ij} &#x3D; \frac{i的重要程度}{j的重要程度} \] 若有 \[ a_{ik} &#x3D; {a_{ij}} *">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-03-23T07:41:27.000Z">
-<meta property="article:modified_time" content="2025-03-23T08:20:22.000Z">
+<meta property="article:modified_time" content="2025-03-23T08:36:35.000Z">
 <meta property="article:author" content="usernamenul1">
 <meta name="twitter:card" content="summary_large_image">
   
@@ -228,7 +228,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          235 字
+          324 字
         
       </span>
     
@@ -239,7 +239,7 @@
         
         
         
-          2 分钟
+          3 分钟
         
       </span>
     
@@ -354,6 +354,21 @@ class="math display">\[
 CR = \frac{CI}{RI}
 \]</span> 如果 <span class="math inline">\(CR &lt; 0.1\)</span>
 ，则认为判断矩阵的一致性可以接受，否则需要修正判断矩阵。</p></li>
+</ol>
+<h3 id="计算权重">计算权重</h3>
+<p>一定要<strong>归一化处理</strong>。</p>
+<p>判断矩阵可能不是一致矩阵，此时可以：</p>
+<ol type="1">
+<li><p>算数平均法求权重 <span class="math display">\[
+\omega_i = \frac{1}{n}\Sigma_{j = 1}^{n}\frac{a_{ij}}{\Sigma_{k =
+1}^{n}a_{kj}}
+\]</span></p></li>
+<li><p>几何平均法求权重 <span class="math display">\[
+\omega_i = \frac{(\Pi_{j = 1}^n a_{ij})^{\frac{1}{n}}}{
+\Sigma^n_{k=1}{(\Pi^n_{k=1}a_{kj})^{\frac1n}}
+}
+\]</span></p></li>
+<li><p>特征值法求权重</p></li>
 </ol>
 
                 
