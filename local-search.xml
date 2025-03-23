@@ -23,6 +23,25 @@
   
   
   <entry>
+    <title>层次分析法</title>
+    <link href="/20250323-cengcifenxifa/"/>
+    <url>/20250323-cengcifenxifa/</url>
+    
+    <content type="html"><![CDATA[<h3 id="解决评价类问题">解决评价类问题</h3><ol type="1"><li>评价的目标</li><li>可选的方案</li><li>评价的指标<ul><li>背景资料</li><li>常识</li><li>上网查文献</li></ul></li></ol><table><thead><tr><th>标度</th><th>含义</th></tr></thead><tbody><tr><td>1</td><td>同等重要</td></tr><tr><td>3</td><td>稍微重要</td></tr><tr><td>5</td><td>明显重要</td></tr><tr><td>7</td><td>强烈重要</td></tr><tr><td>9</td><td>极端重要</td></tr><tr><td>2, 4, 6, 8</td><td>上述的中值</td></tr><tr><td>倒数</td><td>上述反过来</td></tr></tbody></table><h3 id="一致矩阵">一致矩阵</h3><p><span class="math display">\[a_{ij} = \frac{i的重要程度}{j的重要程度}\]</span></p><p>若有</p><p><span class="math display">\[a_{ik} = {a_{ij}} * {a_{jk}}\]</span> 称一致矩阵。</p><p>一致矩阵各行（各列）成倍数关系。</p><p>一致矩阵有一个特征值为n，其余特征值均为0。</p><p><strong>在使用判断矩阵求权重之前，必须进行一致性检验。</strong></p><h3 id="一致性检验">一致性检验</h3><ol type="1"><li><p>计算一致性指标 <span class="math inline">\(CI\)</span> <spanclass="math display">\[CI = \frac{\lambda_{max} - n}{n-1}\]</span></p></li><li><p>查找对应的平均一致性指标 <spanclass="math inline">\(RI\)</span></p></li><li><p>计算一致性比例 <span class="math inline">\(CR\)</span> <spanclass="math display">\[CR = \frac{CI}{RI}\]</span> 如果 <span class="math inline">\(CR &lt; 0.1\)</span>，则认为判断矩阵的一致性可以接受，否则需要修正判断矩阵。</p></li></ol>]]></content>
+    
+    
+    <categories>
+      
+      <category>数学建模</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>新眼镜和更高的性能开销</title>
     <link href="/20250322-newglassesandahigercost/"/>
     <url>/20250322-newglassesandahigercost/</url>
