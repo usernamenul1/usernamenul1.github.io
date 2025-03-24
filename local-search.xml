@@ -23,11 +23,11 @@
   
   
   <entry>
-    <title>优劣解举例法</title>
+    <title>优劣解距离法</title>
     <link href="/20250324-topsis/"/>
     <url>/20250324-topsis/</url>
     
-    <content type="html"><![CDATA[]]></content>
+    <content type="html"><![CDATA[<h2 id="topsis">TOPSIS</h2><h4 id="构造计算评分的公式">构造计算评分的公式</h4><p><span class="math display">\[\frac{x-min}{max-min} = \frac{x-min}{(max-x)+(x-min)}\]</span></p><h4 id="指标正向化">指标正向化</h4><p>极小型转换为极大型： <span class="math display">\[max - x\]</span> 标准化处理（消除不同指标量纲的影响）： <spanclass="math display">\[z_{ij}=\frac{x_{ij}}{\sqrt{\Sigma^n_{i=1}x^2_{ij}}}\]</span> ####</p><p>与最大值的距离： <span class="math display">\[D_i^+ = \sqrt{\Sigma^m_{j=1}(Z^+_j-z_{ij})^2}\]</span> 与最小值的距离： <span class="math display">\[D_i^- = \sqrt{\Sigma^m_{j=1}(Z^-_j-z_{ij})^2}\]</span> 得分： <span class="math display">\[S_i= \frac{D^-_i}{D^+_i+D^-_i}\]</span></p>]]></content>
     
     
     <categories>
