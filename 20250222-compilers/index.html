@@ -19,23 +19,29 @@
   <meta name="author" content="usernamenul1">
   <meta name="keywords" content="">
   
-    <meta name="description" content="mini模式及桌面歌词除英文歌词外均无法显示; 拖动时有明显异常; 最小化状态右键无汉字显示。 使用winetricks下载了所有的fonts。尝试更改字体，无明显区别。 好消息是本人不怎么听歌，纯属心血来潮。选择网易云音乐只是方便同步歌单。 主界面正常，有可以容忍的卡顿感。音乐播放正常。 又不是不能用。 耗电疑似有点太快了。还是不用了罢。">
+    <meta name="description" content="Ch1 Front End Lexical Analysis -&gt; Syntax Analysis -&gt; Semantic Analysis Lexical Analysis (词法分析)  Create tokens &lt;token-class, attribute&gt;  Syntax Analysis (语法分析)  Create the abstract syntax t">
 <meta property="og:type" content="article">
-<meta property="og:title" content="wine所转译的wyy，并非完美。">
-<meta property="og:url" content="http://example.com/20250223-wyy-wine/index.html">
+<meta property="og:title" content="Compilers">
+<meta property="og:url" content="http://example.com/20250222-compilers/index.html">
 <meta property="og:site_name" content="usernamenul1&#39;s blog">
-<meta property="og:description" content="mini模式及桌面歌词除英文歌词外均无法显示; 拖动时有明显异常; 最小化状态右键无汉字显示。 使用winetricks下载了所有的fonts。尝试更改字体，无明显区别。 好消息是本人不怎么听歌，纯属心血来潮。选择网易云音乐只是方便同步歌单。 主界面正常，有可以容忍的卡顿感。音乐播放正常。 又不是不能用。 耗电疑似有点太快了。还是不用了罢。">
+<meta property="og:description" content="Ch1 Front End Lexical Analysis -&gt; Syntax Analysis -&gt; Semantic Analysis Lexical Analysis (词法分析)  Create tokens &lt;token-class, attribute&gt;  Syntax Analysis (语法分析)  Create the abstract syntax t">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-02-23T13:12:52.000Z">
-<meta property="article:modified_time" content="2025-02-24T11:37:57.555Z">
+<meta property="og:image" content="http://example.com/img/compilers/img1.png">
+<meta property="og:image" content="http://example.com/img/compilers/img2.png">
+<meta property="og:image" content="http://example.com/img/compilers/img4-1-1.png">
+<meta property="og:image" content="http://example.com/img/compilers/img4-1-2.png">
+<meta property="og:image" content="http://example.com/img/compilers/img4-1-3.png">
+<meta property="article:published_time" content="2025-02-22T07:04:45.000Z">
+<meta property="article:modified_time" content="2025-03-25T08:54:45.000Z">
 <meta property="article:author" content="usernamenul1">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://example.com/img/compilers/img1.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>wine所转译的wyy，并非完美。 - usernamenul1&#39;s blog</title>
+  <title>Compilers - usernamenul1&#39;s blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -205,7 +211,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="wine所转译的wyy，并非完美。"></span>
+            <span id="subtitle" data-typed-text="Compilers"></span>
           
         </div>
 
@@ -216,8 +222,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-02-23 21:12" pubdate>
-          2025年2月23日 晚上
+        <time datetime="2025-02-22 15:04" pubdate>
+          2025年2月22日 下午
         </time>
       </span>
     
@@ -228,7 +234,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          132 字
+          343 字
         
       </span>
     
@@ -239,7 +245,7 @@
         
         
         
-          2 分钟
+          3 分钟
         
       </span>
     
@@ -276,18 +282,248 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">wine所转译的wyy，并非完美。</h1>
+            <h1 id="seo-header">Compilers</h1>
             
             
               <div class="markdown-body">
                 
-                <p>mini模式及桌面歌词除英文歌词外均无法显示; 拖动时有明显异常;
-最小化状态右键无汉字显示。</p>
-<p>使用winetricks下载了所有的fonts。尝试更改字体，无明显区别。</p>
-<p>好消息是本人不怎么听歌，纯属心血来潮。选择网易云音乐只是方便同步歌单。</p>
-<p>主界面正常，有可以容忍的卡顿感。音乐播放正常。</p>
-<p>又不是不能用。</p>
-<p>耗电疑似有点太快了。还是不用了罢。</p>
+                <h2 id="ch1">Ch1</h2>
+<h4 id="front-end">Front End</h4>
+<p>Lexical Analysis -&gt; Syntax Analysis -&gt; Semantic Analysis</p>
+<p><strong>Lexical Analysis (词法分析)</strong></p>
+<ul>
+<li><p>Create tokens</p>
+<p>&lt;token-class, attribute&gt;</p></li>
+</ul>
+<p><strong>Syntax Analysis (语法分析)</strong></p>
+<ul>
+<li>Create the abstract syntax tree (AST)</li>
+</ul>
+<p><strong>Semantic Analysis (语义分析)</strong></p>
+<ul>
+<li>Check the correct meaning</li>
+<li>Decorate the AST</li>
+</ul>
+<p><strong>IR Generation:</strong></p>
+<ul>
+<li>Generate machine-independent intermediate representation (IR) based
+on the syntax tree</li>
+</ul>
+<h4 id="middle-end">Middle End</h4>
+<p><strong>Optimizations</strong></p>
+<h4 id="back-end">Back End</h4>
+<p><strong>Instruction Selection</strong></p>
+<ul>
+<li>Translate IR to machine code</li>
+<li>Perform machine-development optimization</li>
+</ul>
+<p><strong>Register Allocation</strong></p>
+<p><strong>Instruction Scheduling</strong></p>
+<ul>
+<li>(for example: parallelism)</li>
+</ul>
+<h2 id="ch3">Ch3</h2>
+<h3 id="ch3-1-finite-automata">Ch3-1 Finite Automata</h3>
+<p><img src="../img/compilers/img1.png" srcset="/img/loading.gif" lazyload /></p>
+<p>Empty String: ϵ</p>
+<p><img src="../img/compilers/img2.png" srcset="/img/loading.gif" lazyload /></p>
+<h4 id="deterministic-finite-automata">Deterministic Finite
+Automata</h4>
+<p>A DFA is formally defined as a 5-tuple (Q, Σ, δ, q₀, F), where:</p>
+<ul>
+<li><strong>Q:</strong> A finite set of states.</li>
+<li><strong>Σ:</strong> A finite input alphabet.</li>
+<li><strong>δ:</strong> A transition function δ: Q × Σ → Q that maps a
+state and an input symbol to a single next state.</li>
+<li><strong>q₀:</strong> The start state, where the DFA begins
+processing.</li>
+<li><strong>F:</strong> A set of accept states, F ⊆ Q.</li>
+</ul>
+<h5 id="dfa-minimization">DFA Minimization</h5>
+<h5 id="dfa-bi-simulation">DFA Bi-Simulation</h5>
+<h4 id="non-deterministic-finite-autometa">Non-deterministic Finite
+Autometa</h4>
+<p>Allow ϵ-transitions.</p>
+<h5 id="ϵ-closure">ϵ-Closure</h5>
+<p>ϵ-closure(q) returns all states q can reach via ϵ-transitions,
+including q itself.</p>
+<h4 id="from-nfa-to-dfa">From NFA to DFA</h4>
+<p>ϵ-Closure</p>
+<ul>
+<li>When converting an NFA to a DFA, there is no guarantee that we will
+have a smaller DFA.</li>
+</ul>
+<h3 id="ch3-2-lexical-analysis">Ch3-2 Lexical Analysis</h3>
+<h4 id="laws-of-regex">Laws of Regex</h4>
+<ul>
+<li>Commutativity and Associativity</li>
+<li>Identities and Annihilators</li>
+<li>Distributive and Idempotent Law</li>
+<li>Closure</li>
+</ul>
+<h4 id="regex-regular-language">Regex = Regular Language</h4>
+<ul>
+<li>Any regex represents a <del>regular language</del> NFA/DFA</li>
+<li>Any <del>regular language</del> DFA can be expressed by a regex</li>
+</ul>
+<h4 id="lexical-analysis">Lexical Analysis</h4>
+<p>symbol table</p>
+<h4 id="pumping-lemma">Pumping Lemma</h4>
+<p>If <strong><em>L</em></strong> is an <u>infinite</u> regular language
+(the set <strong><em>L</em></strong> is infinite),</p>
+<p>there must exist an integer <em>m</em>,</p>
+<p>for any string <em>w</em> ∈ <strong><em>L</em></strong> with length
+|<em>w</em>| ≥ <em>m</em>,</p>
+<p>we can write <em>w</em> = <em>xyz</em> with |<em>xy</em>| ≤
+<em>m</em> and |<em>y</em>| ≥ 1,</p>
+<p>such that <em>w</em><sub>i</sub> = <em>xy<sup>i</sup>z</em> ∈
+<em>L</em></p>
+<h2 id="ch4-1">Ch4-1</h2>
+<h3 id="context-free-language">Context-Free Language</h3>
+<h4 id="context-free-grammar-cfg">Context Free Grammar (CFG)</h4>
+<p>A context-free grammar is a tuple <em>G = (V, T, S, P)</em></p>
+<ul>
+<li><em>V</em>: a finite set of non-terminals</li>
+<li><em>T</em>: a finite set of terminals, such that <em>V</em> ∩
+<em>T</em> = ∅</li>
+<li><em>S</em> ∈ <em>V</em>: start non-terminals</li>
+</ul>
+<p>Regular language ⊆ Context-free language</p>
+<p>Context-free language = Push-down automata</p>
+<h4 id="left-most-derivation-lm">Left-Most Derivation
+(=&gt;<sub><em>lm</em></sub>)</h4>
+<p>In every step derivation, we replace the left-most non-terminal.</p>
+<h4 id="right-most-derivation-rm">Right-Most Derivation
+(=&gt;<sub><em>rm</em></sub>)</h4>
+<p>In every step derivation, we replace the right-most non-terminal.</p>
+<h4 id="parsesyntax-trees">Parse/Syntax Trees</h4>
+<p><strong>Parse tree</strong></p>
+<ul>
+<li>Every leaf is a terminal</li>
+<li>Every non-leaf node is a non-terminal</li>
+</ul>
+<h4 id="ambiguity">Ambiguity</h4>
+<p>A grammar is ambiguous if there is a string has two different
+derivation trees.</p>
+<h5 id="eliminating-ambiguity">Eliminating Ambiguity</h5>
+<p>Lifting operators with higher priority</p>
+<h5 id="using-ambiguous-grammar">Using Ambiguous Grammar</h5>
+<h3 id="push-down-automata-pda">Push-Down Automata (PDA)</h3>
+<h4 id="npda">NPDA</h4>
+<p>Context-free language = PDA = NFA + Stack = NPDA (Non-Deterministic
+PDA)</p>
+<p>NPDA/PDA is defined by the septuple:</p>
+<ul>
+<li><em>Q</em> = (<em>Q</em>, Σ, Γ, <em>δ</em>, <em>q<sub>0</sub></em>,
+<em>z<sub>0</sub></em>, <em>F</em>)</li>
+<li><em>Q</em>: a finite set of states</li>
+<li>Σ: finite input alphabet</li>
+<li>Γ: finite stack alphabet</li>
+<li>δ: <em>Q</em> × (Σ ∪ {<em>ϵ</em>})×Γ ⟼ 2<sup>Q× Γ*</sup>:
+transition</li>
+<li><em>q<sub>0</sub></em> ∈ <em>Q</em>: initial state</li>
+<li><em>z<sub>0</sub></em> ∈ Γ: stack start symbol</li>
+<li><em>F</em> ⊆ <em>Q</em>: set of final states</li>
+</ul>
+<h4 id="instantaneous-description">Instantaneous Description</h4>
+<p>An instantaneous description of a PDA is a triple</p>
+<p><img src="../img/compilers/img4-1-1.png" srcset="/img/loading.gif" lazyload /></p>
+<h4 id="language-of-pda">Language of PDA</h4>
+<p>At the end of computation, we don’t care about stack contents</p>
+<p>acceptance by final states:</p>
+<p><img src="../img/compilers/img4-1-2.png" srcset="/img/loading.gif" lazyload /></p>
+<p>acceptance by empty stack:</p>
+<p><img src="../img/compilers/img4-1-3.png" srcset="/img/loading.gif" lazyload /></p>
+<h3 id="equivalence-of-pda-and-cfg">Equivalence of PDA and CFG</h3>
+<p>TBD</p>
+<h3 id="properties-of-cfl">Properties of CFL</h3>
+<h4 id="closure-properties">Closure Properties</h4>
+<p>Given two CFL, <em>L<sub>1</sub></em> and <em>L<sub>2</sub></em>, the
+following are CFL</p>
+<ul>
+<li><em>L<sub>1</sub></em> ∪ <em>L<sub>2</sub></em></li>
+<li><em>L<sub>1</sub>L<sub>2</sub></em></li>
+<li><em>L<sub>1</sub><sup>*</sup></em></li>
+<li><em>L<sub>1</sub><sup>R</sup></em>（ = <span
+class="math inline">\(\{w^R:w \in L_1 \}\)</span>）</li>
+</ul>
+<p>Given two CFL, <em>L<sub>1</sub></em> and <em>L<sub>2</sub></em>, the
+following may not be CFL</p>
+<ul>
+<li><em>L<sub>1</sub></em> ∩ <em>L<sub>2</sub></em>（ = <span
+class="math inline">\(\overline{\overline{L_1} \cup \overline{L_2}
+}\)</span>）</li>
+<li><span
+class="math inline">\(\overline{\textit{L}}\)</span><sub>1</sub></li>
+<li><em>L<sub>1</sub></em> - <em>L<sub>2</sub></em></li>
+</ul>
+<h3 id="pumping-lemma-for-cfl">Pumping Lemma for CFL</h3>
+<h4 id="chomsky-normal-form">Chomsky Normal Form</h4>
+<p><span class="math inline">\(A \rightarrow BC;\)</span></p>
+<p><span class="math inline">\(A \rightarrow BC;\)</span></p>
+<p>$ S; $</p>
+<h4 id="pumping-lemma-for-cfl-1">Pumping Lemma for CFL</h4>
+<p>Given a CFL <span class="math inline">\(L\)</span>, there exists a
+constant <span class="math inline">\(n\)</span> such that we have <span
+class="math inline">\(z=uvwxy \in L,\ |z| \geq n\)</span> satisfying the
+condition below</p>
+<ul>
+<li><span class="math inline">\(vx\neq\epsilon\)</span></li>
+<li><span class="math inline">\(|vwx|\leq n\)</span></li>
+<li><span class="math inline">\(\forall i \geq 0,\ z_i=uv^iwx^iy\in
+L\)</span></li>
+</ul>
+<h2 id="ch4-2">Ch4-2</h2>
+<h3 id="top-down-parsing">Top-Down Parsing</h3>
+<p>Constructing a parse tree in preorder</p>
+<ol type="1">
+<li>Backtracking may be necessary.</li>
+<li>A left-recursive grammar can cause infinite loops.</li>
+</ol>
+<h3 id="eliminating-left-recursion">Eliminating Left-Recursion</h3>
+<p><span class="math inline">\(A\rightarrow A\alpha\ |\ \beta\)</span>
+can be transformed into:</p>
+<p><span class="math inline">\(A\rightarrow \beta A^{&#39;}\)</span></p>
+<p><span class="math inline">\(A^{&#39;}\rightarrow\alpha A^{&#39;}\ | \
+\epsilon\)</span></p>
+<h3 id="predictive-parsing">Predictive Parsing</h3>
+<p>Predictive parsers are recursive descent parser without
+backtracking.</p>
+<h4 id="ll1">LL(1)</h4>
+<ul>
+<li>L: scanning input from left to right</li>
+<li>L: leftmost derivation</li>
+<li>1: Using one input symbol of lookahead at each step</li>
+</ul>
+<h4 id="first">FIRST()</h4>
+<p>A set of terminals that 𝛼 may start with.</p>
+<ul>
+<li><p>If <span class="math inline">\(X\)</span> is a terinal,
+FIRST(<span class="math inline">\(X\)</span>) ={<span
+class="math inline">\(X\)</span>}</p></li>
+<li><p>If <span class="math inline">\(X\rightarrow \epsilon\)</span> is
+a production, <span class="math inline">\(\epsilon \in\)</span>
+FIRST(<span class="math inline">\(X\)</span>)</p></li>
+<li><p>If <span class="math inline">\(X \rightarrow
+Y_1Y_2...Y_k,\)</span></p>
+<p><span class="math inline">\(\epsilon \in \cap_{j=1}^{i-1}FIRST(Y_j)
+\land a \in FIRST(Y_i) \Rightarrow a \in FIRST(X)\)</span></p>
+<p><span class="math inline">\(\epsilon \in \cap_{j=1}^{i-1}FIRST(Y_j)
+\Rightarrow \epsilon \in FIRST(X)\)</span></p></li>
+</ul>
+<h4 id="follow">FOLLOW()</h4>
+<p>A set of terminals that can appear immediately to the right of <span
+class="math inline">\(\alpha\)</span></p>
+<ul>
+<li><span class="math inline">\(\$ \in FOLLOW(S)\)</span>, where <span
+class="math inline">\(\$\)</span> is string's end marker, <span
+class="math inline">\(S\)</span> the start non-terminal</li>
+<li><span class="math inline">\(A \rightarrow \alpha B\beta \Rightarrow
+FIRST(\beta)\backslash\{\epsilon\} \subseteq FOLLOW(B)\)</span></li>
+<li><span class="math inline">\(A\rightarrow \alpha B\ or\ A \rightarrow
+\alpha B\beta \ where\ \epsilon \in FIRST(\beta)\Rightarrow
+FOLLOW(A)\subseteq FOLLOW(B)\)</span></li>
+</ul>
 
                 
               </div>
@@ -306,7 +542,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/Linux/" class="category-chain-item">Linux</a>
+  <a href="/categories/%E8%AF%BE%E7%A8%8B/" class="category-chain-item">课程</a>
   
   
 
@@ -328,9 +564,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/20250306-avemujica10/" title="Ave Mujica 第10话之后">
+                      <a href="/20250223-wyy-wine/" title="wine所转译的wyy，并非完美。">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Ave Mujica 第10话之后</span>
+                        <span class="hidden-mobile">wine所转译的wyy，并非完美。</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -338,8 +574,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/20250222-compilers/" title="Compilers">
-                        <span class="hidden-mobile">Compilers</span>
+                      <a href="/20250218-mamyberust/" title="尝试学习Rust">
+                        <span class="hidden-mobile">尝试学习Rust</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
