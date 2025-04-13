@@ -23,12 +23,18 @@
   
   
   <entry>
-    <title>Interpolation</title>
+    <title>插值法</title>
     <link href="/20250413-Interpolation/"/>
     <url>/20250413-Interpolation/</url>
     
-    <content type="html"><![CDATA[]]></content>
+    <content type="html"><![CDATA[<h2 id="插值算法">插值算法</h2><h3 id="原理">原理</h3><p>设有 n+1 个互不相同的节点 $ (x_i,y_i)  (i = 0,1,2,...n) $</p><p>则存在唯一的多项式 <span class="math display">\[L_n(x)=a_0+a_1x+a_2x^2+...+a_nx^n\\\text{使得 } L_n(x_j)=y_j \ \ (j =0,1,2,...n)\]</span></p>]]></content>
     
+    
+    <categories>
+      
+      <category>数学建模</category>
+      
+    </categories>
     
     
   </entry>
@@ -46,6 +52,25 @@
     <categories>
       
       <category>杂谈</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>优劣解距离法</title>
+    <link href="/20250324-topsis/"/>
+    <url>/20250324-topsis/</url>
+    
+    <content type="html"><![CDATA[<h2 id="topsis">TOPSIS</h2><h4 id="构造计算评分的公式">构造计算评分的公式</h4><p><span class="math display">\[\frac{x-min}{max-min} = \frac{x-min}{(max-x)+(x-min)}\]</span></p><h4 id="指标正向化">指标正向化</h4><ul><li><p>极小型转换为极大型：<span class="math inline">\(max -x\)</span>，如果所有元素都为正数，也可以使用：<spanclass="math inline">\(\frac{1}{x}\)</span>。</p></li><li><p>中间型转换为极大型：</p><p><span class="math display">\[M = max\{|x_i - x_{best}|\},\]</span></p><p><span class="math display">\[\tilde{x_i} = 1-\frac{|x_i-x_{best}|}{M}\]</span></p></li><li><p>区间型指标 <span class="math display">\[M = max\{a-min\{x_i\}, max\{x_i\}-b\},\]</span></p><p><span class="math display">\[\tilde{x_i} =\begin{cases}1-\frac{a-x}{M},\ \ x&lt;a\\1,\ \ \ \ \ \ \ \ \ \ \ \ \ \ a\leq x \leq b\\1-\frac{x-b}{M},\ \ x&gt;b\end{cases}\]</span></p></li></ul><p>标准化处理（消除不同指标量纲的影响）： <span class="math display">\[z_{ij}=\frac{x_{ij}}{\sqrt{\sum^n_{i=1}x^2_{ij}}}\]</span></p><h4 id="topsis-1">TOPSIS</h4><p>与最大值的距离： <span class="math display">\[D_i^+ = \sqrt{\sum^m_{j=1}(Z^+_j-z_{ij})^2}\]</span> 与最小值的距离： <span class="math display">\[D_i^- = \sqrt{\sum^m_{j=1}(Z^-_j-z_{ij})^2}\]</span> 得分： <span class="math display">\[S_i= \frac{D^-_i}{D^+_i+D^-_i}\]</span></p><h3 id="基于层次分析法修正">基于层次分析法修正</h3><p>权重可以不同 <span class="math display">\[D_i^+ = \sqrt{\sum^m_{j=1}{\color{red}{\omega_j}}(Z^+_j-z_{ij})^2}\]</span></p><p><span class="math display">\[D_i^- = \sqrt{\sum^m_{j=1}{\color{red}{\omega_j}}(Z^-_j-z_{ij})^2}\]</span></p><h3 id="基于熵权法修正">基于熵权法修正</h3><p>原理：指标的变异程度越少，所反映的信息量也越少，其对应的权值也应该越低。</p><h4 id="信息熵">信息熵</h4><p><span class="math display">\[H(X) = \sum^n_{i=1}[p(x_i)I(x_i)] = - \sum^n_{i=1}[p(x_i)ln(p(x_i))]\]</span></p><p>信息量越大，信息熵越小。</p><p>计算步骤：</p><ol type="1"><li><p>标准化到非负区间</p></li><li><p>计算第 j 项指标下第 i个样本所占的比重，并将其看作相对熵计算中用到的概率</p><p>经过第一步处理得到非负矩阵 $$ {} =</p><span class="math display">\[\begin{pmatrix}\tilde{z_{11}}&amp;\tilde{z_{12}}&amp;\cdots&amp;\tilde{z_{1m}}\\\tilde{z_{21}}&amp;\tilde{z_{22}}&amp;\cdots&amp;\tilde{z_{2m}}\\\vdots &amp; \vdots &amp; \ddots &amp; \vdots\\\tilde{z_{n1}}&amp;\tilde{z_{n2}}&amp;\cdots&amp;\tilde{z_{nm}}\end{pmatrix}\]</span><p><span class="math display">\[计算概率矩阵$ P $, 其中\]</span> p_{ij} = \ ^n_{i=1}p_{ij}=1 $$</p></li><li><p>计算每个指标的信息熵，并计算信息效用值，并归一化得到每个指标的熵权<span class="math display">\[e_j=-\frac{1}{\ln n}\sum_{i=1}^np_{ij}\ln(p_{ij})\ (j=1, 2, ..., m)\]</span></p></li></ol><p>这方法挺扯的我只能说。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>数学建模</category>
       
     </categories>
     
