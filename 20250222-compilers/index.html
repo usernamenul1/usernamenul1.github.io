@@ -31,8 +31,9 @@
 <meta property="og:image" content="http://example.com/img/compilers/img4-1-1.png">
 <meta property="og:image" content="http://example.com/img/compilers/img4-1-2.png">
 <meta property="og:image" content="http://example.com/img/compilers/img4-1-3.png">
+<meta property="og:image" content="http://example.com/img/compilers/GSA.png">
 <meta property="article:published_time" content="2025-02-22T07:04:45.000Z">
-<meta property="article:modified_time" content="2025-04-14T10:11:35.000Z">
+<meta property="article:modified_time" content="2025-04-14T10:15:05.000Z">
 <meta property="article:author" content="usernamenul1">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="http://example.com/img/compilers/img1.png">
@@ -234,7 +235,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          502 字
+          504 字
         
       </span>
     
@@ -587,7 +588,7 @@ Code</h4>
 definitions from multi paths.</p>
 <figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs excel"><span class="hljs-built_in">if</span>(flag) x = -<span class="hljs-number">1</span>;<br>else x = <span class="hljs-number">1</span>;<br>y = x * a;<br>=&gt;<br><span class="hljs-built_in">if</span>(flag) <span class="hljs-symbol">x1</span> = -<span class="hljs-number">1</span>;<br>else <span class="hljs-symbol">x2</span> = <span class="hljs-number">1</span>;<br><span class="hljs-symbol">x3</span> = \phi(<span class="hljs-symbol">x1</span>, <span class="hljs-symbol">x2</span>);<br>y = <span class="hljs-symbol">x3</span> * a;<br></code></pre></td></tr></table></figure></li>
 </ol>
-<h5 id="gated-ssa">Gated SSA</h5>
+<h5 id="gated-ssa-gsa">Gated SSA (GSA)</h5>
 <ol type="1">
 <li><p>Every variable has only one definition.</p></li>
 <li><p>Use recursive <span class="math inline">\(\gamma\)</span> to
@@ -598,6 +599,7 @@ chains</strong></p>
 <li><p>use <span class="math inline">\(\mu\)</span> and <span
 class="math inline">\(\eta\)</span> for loop variables.</p></li>
 </ol>
+<p><img src="../img/compilers/GSA.png" srcset="/img/loading.gif" lazyload /></p>
 
                 
               </div>
