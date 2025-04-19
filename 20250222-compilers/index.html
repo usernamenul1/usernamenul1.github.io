@@ -33,7 +33,7 @@
 <meta property="og:image" content="http://example.com/img/compilers/img4-1-3.png">
 <meta property="og:image" content="http://example.com/img/compilers/GSA.png">
 <meta property="article:published_time" content="2025-02-22T07:04:45.000Z">
-<meta property="article:modified_time" content="2025-04-14T14:30:52.000Z">
+<meta property="article:modified_time" content="2025-04-18T09:46:14.000Z">
 <meta property="article:author" content="usernamenul1">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="http://example.com/img/compilers/img1.png">
@@ -235,7 +235,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          568 字
+          622 字
         
       </span>
     
@@ -246,7 +246,7 @@
         
         
         
-          5 分钟
+          6 分钟
         
       </span>
     
@@ -666,6 +666,61 @@ Bset}DF(B)\)</span></p>
 <li>……</li>
 <li>until fixed point!</li>
 </ul>
+<h4 id="idf-vs.-ssa">IDF vs. SSA</h4>
+<h2 id="ch8-1">Ch8-1</h2>
+<h3 id="targret-code-generation">Targret Code Generation</h3>
+<ul>
+<li>Memory (Heap/Stack/...). Each byte has an address.</li>
+<li>n Registers: R0, R1, ..., Rn-1. Each for bytes.</li>
+<li>Load/Store/Calculation/Jump/...(Like x86 assembly)</li>
+</ul>
+<h3 id="in-block-optimization">In-Block Optimization</h3>
+<h3 id="peephole-optimization">Peephole Optimization</h3>
+<h2 id="ch8-2">Ch8-2</h2>
+<h3 id="the-lost-copy-problem">The Lost Copy Problem</h3>
+<h3 id="the-swap-problem">The Swap Problem</h3>
+<h2 id="ch-8-3">Ch 8-3</h2>
+<blockquote>
+<p>Register Allocation</p>
+<p>Pysical machines have limited number of registers.</p>
+<p>Register allocation: <span class="math inline">\(\infty\)</span>
+virtual registers <span class="math inline">\(\rightarrow\)</span> <span
+class="math inline">\(k\)</span> physical registers</p>
+</blockquote>
+<h3 id="local-register-allocation">Local Register Allocation</h3>
+<p><strong>Requirement</strong>:</p>
+<ul>
+<li>Produce correct code using <span class="math inline">\(k\)</span> or
+fewer registers</li>
+<li>Minimize loads, stores, and space to hold spilled values</li>
+<li>Efficient register allocation (<span
+class="math inline">\(O(n)\)</span> or <span
+class="math inline">\(O(n\log{n})\)</span>)</li>
+</ul>
+<p><strong>Spilling</strong>:</p>
+<ul>
+<li>saves a value from a register to memory</li>
+<li>the register is then free for other values</li>
+<li>we can load the spilled value from memory to register when
+necessary</li>
+</ul>
+<p><strong>MAXLIVE</strong>: the maximum of values live at each
+instruction</p>
+<ul>
+<li>MAXLIVE ≤ k ---Allocation is trivial</li>
+<li>MAXLIVE &gt; k--- Values must be spilled to the memory</li>
+</ul>
+<h3 id="global-register-allocation">Global Register Allocation</h3>
+<p>Global allocation often uses the <strong>graph-coloring
+paradigm</strong></p>
+<ul>
+<li>Build a conflict/interference graph</li>
+<li>Find a <strong>k-coloring</strong> for the graph, or change the code
+to a nearby problem that it can color</li>
+<li><strong>NP-complete</strong> under nearly all assumptions, so
+heuristics are needed</li>
+</ul>
+<h4 id="k-coloring">K-Coloring</h4>
 
                 
               </div>
