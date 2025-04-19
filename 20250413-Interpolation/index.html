@@ -27,7 +27,7 @@
 <meta property="og:description" content="插值算法 原理 设有 n+1 个互不相同的节点 $ (x_i,y_i)  (i &#x3D; 0,1,2,...n) $ 则存在唯一的多项式 \[ L_n(x)&#x3D;a_0+a_1x+a_2x^2+...+a_nx^n\\\text{使得 } L_n(x_j)&#x3D;y_j \ \ (j &#x3D; 0,1,2,...n) \] 注意：  只要 n+1 个节点互异，满足上述插值条件的多项式是唯一存在的 如果不限制多项式的次数">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-04-13T12:37:00.000Z">
-<meta property="article:modified_time" content="2025-04-14T09:09:55.000Z">
+<meta property="article:modified_time" content="2025-04-19T12:57:17.000Z">
 <meta property="article:author" content="usernamenul1">
 <meta name="twitter:card" content="summary_large_image">
   
@@ -228,7 +228,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          195 字
+          382 字
         
       </span>
     
@@ -239,7 +239,7 @@
         
         
         
-          2 分钟
+          4 分钟
         
       </span>
     
@@ -302,6 +302,33 @@ L_n(x) =
 <h4 id="runge-phenomenon">Runge Phenomenon</h4>
 <p>高次插值在两端波动极大，产生明显的震荡。</p>
 <p>不熟悉曲线运动趋势的前提下，不要轻易使用高次插值。</p>
+<h3 id="分段二次插值">分段二次插值</h3>
+<p>选取跟节点 <span class="math inline">\(x\)</span> 最近的三个节点
+<span class="math inline">\(x_{i-1},x_i, x_{i+1}\)</span>
+进行二次插值。即再每一个区间 <span
+class="math inline">\([x_{i-1},x_{i+1}]\)</span> 上，取： <span
+class="math display">\[
+f(x) \approx L_2(x) = \sum^{i+1}_{k=i-1}(y_k\prod_{j=i-1\atop j \neq
+k}\frac{x_i-x_j}{x_k-x_i})
+\]</span></p>
+<h3 id="牛顿插值法">牛顿插值法</h3>
+<p>与拉格朗日法相比，具有继承性。</p>
+<p>存在龙格现象。</p>
+<h4 id="差商">差商</h4>
+<h5 id="一阶差商">一阶差商</h5>
+<p><span class="math display">\[
+\text{称 }f[x_0,x_k] = \frac{f(x_k)-f(x_0)}{x_k-x_0}\text{
+为函数}f(x)\text{关于点}x_0,x_k\text{的一阶差商}
+\]</span></p>
+<h5 id="k阶差商">k阶差商</h5>
+<p><span class="math display">\[
+f[x_0,x_1,...,x_k]=\frac{f[x_1,...,x_{k-1},x_k]-f[x_0,x_1,...,x_{k-1}]}{x_k-x_0}
+\]</span></p>
+<h4 id="牛顿插值法-1">牛顿插值法</h4>
+<p><span class="math display">\[
+f(x) = f(x_0)+f[x_0, x_1](x-x_0) + f[x_0, x_1,x_2](x-x_0)(x-x_1)+...
++f[x_0, x_1,...,x_{n}](x-x_0)(x-x_1)...(x-x_{n})
+\]</span></p>
 
                 
               </div>
