@@ -19,13 +19,15 @@
   <meta name="author" content="usernamenul1">
   <meta name="keywords" content="">
   
-    <meta property="og:type" content="article">
-<meta property="og:title" content="correlationcoefficient">
+    <meta name="description" content="总体：所考察对象的全部个体 样本：从总体中抽取的一部分个体 Pearson 相关系数 注意，在确定这两个变量是线性相关之前，算这个没毛用。 总体 Pearson 相关系数 剔除了量纲影响，标准化之后的协方差。 \[ \text{如果两组数据}X:\{X_1,X_2,...X_n\}和\{Y_1,Y_2,...Y_n\}\text{是总体数据}\\ 那么总体均值：E(X)&#x3D;\frac{\sum^{n">
+<meta property="og:type" content="article">
+<meta property="og:title" content="相关系数">
 <meta property="og:url" content="http://example.com/20250429-correlationcoefficient/index.html">
 <meta property="og:site_name" content="usernamenul1&#39;s blog">
+<meta property="og:description" content="总体：所考察对象的全部个体 样本：从总体中抽取的一部分个体 Pearson 相关系数 注意，在确定这两个变量是线性相关之前，算这个没毛用。 总体 Pearson 相关系数 剔除了量纲影响，标准化之后的协方差。 \[ \text{如果两组数据}X:\{X_1,X_2,...X_n\}和\{Y_1,Y_2,...Y_n\}\text{是总体数据}\\ 那么总体均值：E(X)&#x3D;\frac{\sum^{n">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-04-29T13:18:54.000Z">
-<meta property="article:modified_time" content="2025-04-29T13:18:54.359Z">
+<meta property="article:modified_time" content="2025-04-29T14:13:05.000Z">
 <meta property="article:author" content="usernamenul1">
 <meta name="twitter:card" content="summary_large_image">
   
@@ -33,7 +35,7 @@
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>correlationcoefficient - usernamenul1&#39;s blog</title>
+  <title>相关系数 - usernamenul1&#39;s blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -203,7 +205,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="correlationcoefficient"></span>
+            <span id="subtitle" data-typed-text="相关系数"></span>
           
         </div>
 
@@ -226,7 +228,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          0 字
+          242 字
         
       </span>
     
@@ -237,7 +239,7 @@
         
         
         
-          1 分钟
+          3 分钟
         
       </span>
     
@@ -274,12 +276,35 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">correlationcoefficient</h1>
+            <h1 id="seo-header">相关系数</h1>
             
             
               <div class="markdown-body">
                 
-                
+                <p>总体：所考察对象的全部个体</p>
+<p>样本：从总体中抽取的一部分个体</p>
+<h2 id="pearson-相关系数">Pearson 相关系数</h2>
+<p>注意，在确定这两个变量是线性相关之前，算这个没毛用。</p>
+<h3 id="总体-pearson-相关系数">总体 Pearson 相关系数</h3>
+<p>剔除了量纲影响，标准化之后的协方差。 <span class="math display">\[
+\text{如果两组数据}X:\{X_1,X_2,...X_n\}和\{Y_1,Y_2,...Y_n\}\text{是总体数据}\\
+那么总体均值：E(X)=\frac{\sum^{n}_{i=1}X_i}{n},\
+E(Y)=\frac{\sum^{n}_{i=1}Y_i}{n}
+\\
+总体协方差：Cov(X,Y)=\frac{\sum^n_{i=1}(X_i-E(X))(Y_i-E(Y))}{n}\\
+总体Pearson相关系数：\rho_{XY}=\frac{Cov(X,Y)}{\sigma_X\sigma_Y}=\frac{\sum_{i=1}^n\frac{X_i-E(X)}{\sigma_X}\frac{Y_i-E(Y)}{\sigma_Y}}{n}\\
+其中\sigma_X是X的标准差，\sigma_X=\sqrt{\frac{\sum_{i=1}^n(X_i-E(X))^2}{n}},\
+\sigma_Y=\sqrt{\frac{\sum_{i=1}^n(Y_i-E(Y))^2}{n}}
+\\ |\rho_{XY} |\leq1,\ 且Y=aX+b时,\ \rho_{XY} =
+\left\{
+\begin{aligned}
+1,\ a&gt;0\\
+-1, \ a&lt;0
+\end{aligned}
+\right.
+\]</span></p>
+<h3 id="样本-pearson-相关系数">样本 Pearson 相关系数</h3>
+<p>懒得写了</p>
 
                 
               </div>
@@ -287,6 +312,27 @@
             <hr/>
             <div>
               <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E6%95%B0%E5%AD%A6%E5%BB%BA%E6%A8%A1/" class="category-chain-item">数学建模</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
   
   
 </div>
