@@ -33,7 +33,7 @@
 <meta property="og:image" content="http://example.com/img/compilers/img4-1-3.png">
 <meta property="og:image" content="http://example.com/img/compilers/GSA.png">
 <meta property="article:published_time" content="2025-02-22T07:04:45.000Z">
-<meta property="article:modified_time" content="2025-04-18T09:46:14.000Z">
+<meta property="article:modified_time" content="2025-05-16T12:04:50.000Z">
 <meta property="article:author" content="usernamenul1">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="http://example.com/img/compilers/img1.png">
@@ -235,7 +235,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          622 字
+          652 字
         
       </span>
     
@@ -721,6 +721,38 @@ to a nearby problem that it can color</li>
 heuristics are needed</li>
 </ul>
 <h4 id="k-coloring">K-Coloring</h4>
+<ul>
+<li><strong>Vertex Coloring</strong>: assign a color to each vertex such
+that no edge connects vertices with the same color.</li>
+<li>K-Coloring: a coloring using at most k colors.</li>
+</ul>
+<h5 id="k-coloring-for-register-allocation">K-Coloring for Register
+Allocation</h5>
+<ul>
+<li>Map graph vertices onto virtual registers</li>
+<li>Map colors onto physical registers</li>
+</ul>
+<p>From live ranges construct a conflict graph, color the graph so that
+no two naighbors have the same color.</p>
+<p>If graph needs more than <span class="math inline">\(k\)</span>
+colors -&gt; Spilling.</p>
+<p>A vertex such that its degree &lt; k is always k-colorable.</p>
+<h5 id="chaitins-algorithm">Chaitin's Algorithm</h5>
+<p>Remove vertices whose degree &lt; k, and push them to a stack until
+the graph becomes empty.</p>
+<p>When the algorithm reaches a state where every vertex has a degree
+<span class="math inline">\(\geq\)</span> k:</p>
+<ul>
+<li>Choose a vertex immediately to spill
+<ul>
+<li>put the vertex into a spill list</li>
+<li>remove the vertex from the graph</li>
+<li>continue moving vertices &lt; k degree from the graph to the
+stack</li>
+</ul></li>
+<li>If the spill list is not empty, insert spill code, rebuild conflict
+graph, and retry allocation.</li>
+</ul>
 
                 
               </div>
