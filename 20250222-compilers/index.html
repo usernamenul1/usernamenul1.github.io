@@ -33,7 +33,7 @@
 <meta property="og:image" content="http://example.com/img/compilers/img4-1-3.png">
 <meta property="og:image" content="http://example.com/img/compilers/GSA.png">
 <meta property="article:published_time" content="2025-02-22T07:04:45.000Z">
-<meta property="article:modified_time" content="2025-05-16T12:04:50.000Z">
+<meta property="article:modified_time" content="2025-05-23T07:37:37.000Z">
 <meta property="article:author" content="usernamenul1">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="http://example.com/img/compilers/img1.png">
@@ -235,7 +235,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          652 字
+          707 字
         
       </span>
     
@@ -736,7 +736,8 @@ Allocation</h5>
 no two naighbors have the same color.</p>
 <p>If graph needs more than <span class="math inline">\(k\)</span>
 colors -&gt; Spilling.</p>
-<p>A vertex such that its degree &lt; k is always k-colorable.</p>
+<p><strong>A vertex such that its degree &lt; k is always
+k-colorable.</strong></p>
 <h5 id="chaitins-algorithm">Chaitin's Algorithm</h5>
 <p>Remove vertices whose degree &lt; k, and push them to a stack until
 the graph becomes empty.</p>
@@ -753,6 +754,33 @@ stack</li>
 <li>If the spill list is not empty, insert spill code, rebuild conflict
 graph, and retry allocation.</li>
 </ul>
+<h5 id="chaitin-briggs-algorithm">Chaitin-Briggs Algorithm</h5>
+<p>Degree of a vertex is a loose upper bound on colorability.</p>
+<p>A vertex such that its degree &lt; k is always k-colorable.</p>
+<p>A vertex such that its degree <span
+class="math inline">\(\geq\)</span> k may also be k-colorable.</p>
+<ul>
+<li>Choose a vertex immediately to spill
+<ul>
+<li>push the vertex (to spill) to the stack</li>
+<li>we may have a color availble when it is popped</li>
+</ul></li>
+</ul>
+<p>Compared to Chaitin's Algorithm, Chaitin-Briggs Algorithm delays the
+spill operation.</p>
+<h5 id="spill-candidates">Spill Candidates</h5>
+<h5 id="alternative-spilling">Alternative Spilling</h5>
+<p>Spliting Live Ranges, Coalescing Virtual Registers(Does'nt always
+work), etc.</p>
+<h2 id="ch9-1">Ch9-1</h2>
+<h3 id="data-flow-analysis">Data Flow Analysis</h3>
+<h4 id="the-worklist-algorithm">The Worklist Algorithm</h4>
+<p>For each basic block B, initialize IN[B] an OUT[B].</p>
+<p>worklist = set of all basic blocks. while(!worklist.empty()): B =
+worklist.pop; IN[B] = <span class="math inline">\(\and_{P\in
+pred(B)}\)</span>OUT[P]; OUT[B] = <span
+class="math inline">\(f_B\)</span>(IN[B]); if OUT[B] changed:
+worklist.push(all B's successors)</p>
 
                 
               </div>
