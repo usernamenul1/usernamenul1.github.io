@@ -33,7 +33,7 @@
 <meta property="og:image" content="http://example.com/img/compilers/img4-1-3.png">
 <meta property="og:image" content="http://example.com/img/compilers/GSA.png">
 <meta property="article:published_time" content="2025-02-22T07:04:45.000Z">
-<meta property="article:modified_time" content="2025-05-23T07:37:37.000Z">
+<meta property="article:modified_time" content="2025-05-27T09:34:21.000Z">
 <meta property="article:author" content="usernamenul1">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="http://example.com/img/compilers/img1.png">
@@ -235,7 +235,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          707 字
+          783 字
         
       </span>
     
@@ -246,7 +246,7 @@
         
         
         
-          6 分钟
+          7 分钟
         
       </span>
     
@@ -776,11 +776,62 @@ work), etc.</p>
 <h3 id="data-flow-analysis">Data Flow Analysis</h3>
 <h4 id="the-worklist-algorithm">The Worklist Algorithm</h4>
 <p>For each basic block B, initialize IN[B] an OUT[B].</p>
-<p>worklist = set of all basic blocks. while(!worklist.empty()): B =
-worklist.pop; IN[B] = <span class="math inline">\(\and_{P\in
-pred(B)}\)</span>OUT[P]; OUT[B] = <span
-class="math inline">\(f_B\)</span>(IN[B]); if OUT[B] changed:
-worklist.push(all B's successors)</p>
+<p>worklist = set of all basic blocks.</p>
+<p>while(!worklist.empty()):</p>
+<p>​ B = worklist.pop;</p>
+<p>​ IN[B] = <span class="math inline">\(\and\)</span><span
+class="math inline">\(_{P\in pred(B)}\)</span>OUT[P];</p>
+<p>​ OUT[B] = <span class="math inline">\(f_B\)</span>(IN[B]);</p>
+<p>​ if OUT[B] changed:</p>
+<p>​ worklist.push(all B's successors)</p>
+<h4 id="reaching-definitions">Reaching Definitions</h4>
+<p>A definition d may reach a program point, if there is a path from d
+to the program point such that d is not killed along the path.</p>
+<p>OUT[B] = <span class="math inline">\(f_B\)</span>(IN[B]) = $gen_B $
+(IN[B] - <span class="math inline">\(kill_B\)</span>)</p>
+<p>IN[B] = <span class="math inline">\(\and_{P\in
+preds(B)}\)</span>OUT[P] = <span class="math inline">\(\cup_{p \in
+preds(B)}\)</span>OUT[P]</p>
+<h4 id="available-expressions">Available Expressions</h4>
+<p>An expression x + y is available at a point p if:</p>
+<ul>
+<li>every path from the entry node to p evaluates x + y, and</li>
+<li>after the last such evaluation prior to reaching p, there are no
+subsequent assignments to x or y.</li>
+</ul>
+<p>OUT[B] = <span class="math inline">\(e\_gen_B \cup
+(IN[B]-e\_kill_B)\)</span></p>
+<p>IN[B] = <span class="math inline">\(\cap_{P\ a\ predecessor\ of\
+B}\)</span>OUT[P]</p>
+<h4 id="live-variable-analysis">Live Variable Analysis</h4>
+<h5 id="a-dead-value">A dead value</h5>
+<p>After a variable is revised, its previous value (in the register) is
+dead</p>
+<h5 id="a-live-value">A live value</h5>
+<ul>
+<li>A variable is not be re-defined</li>
+<li>After loading to a register, the value in the register is valid</li>
+</ul>
+<h5 id="backward-data-flow-analysis">Backward data flow analysis</h5>
+<p>IN[B] = <span class="math inline">\(uses_B \cup
+(OUT[B]-def_B)\)</span></p>
+<p>OUT[B] = <span class="math inline">\(\cup_{S\ a\ successor\ of\
+B}\)</span>IN[S]</p>
+<h3 id="partical-redundancy">Partical Redundancy</h3>
+<h4 id="sources-of-redundancy">Sources of Redundancy</h4>
+<ol type="1">
+<li>Common expression</li>
+<li>Loop invariant motion</li>
+<li>Partical Redundancy</li>
+</ol>
+<h4 id="the-lazy-code-motion-problem">The Lazy Code Motion Problem</h4>
+<ul>
+<li>All redundant computations of expressions that can be eliminated
+without code duplication are eliminated.</li>
+<li>The optimized program does not perform any computation that is not
+in the original program execution.</li>
+<li>Expressions are computed at the latest possible time.</li>
+</ul>
 
                 
               </div>
