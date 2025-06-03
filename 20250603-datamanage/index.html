@@ -19,23 +19,25 @@
   <meta name="author" content="usernamenul1">
   <meta name="keywords" content="">
   
-    <meta name="description" content="从来都没有写日记的习惯，文笔也很差。以前会思考一些可能有点哲思的东西，现在基本不了。 虽说是软件工程专业在读，但本人并不具备很多的专业知识，至少目前。因此，在这里的大部分想必是关于生活，或者是学习的过程。我想我并没有什么强烈的爱好，暂时。 在很早之前就有过搭建个人博客的想法，一直都没有实施，主要是因为没什么可写。或者是有什么可写但忘记了，或者是没有忘记但是不想提起了。或许有一个属于自己的博客可以让">
+    <meta name="description" content="第一章 ch01 计算、数据与数据管理 人工管理，文件系统，数据库管理 ch02 几个基本概念 数据 数据库中存储的基本对象 定义：描述事物的符号记录 数据的含义称语义 数据库 定义：数据库（Database，简称DB）是长期储存在计算机内、有组织的、可共享的大量数据的集合 基本特征：  数据按一定的数据模型组织、描述和储存 可为各种用户共享 冗余度较小 数据独立性较高 易扩展  数据库管理系统">
 <meta property="og:type" content="article">
-<meta property="og:title" content="很可能是序">
-<meta property="og:url" content="http://example.com/20991231-theFirst/index.html">
+<meta property="og:title" content="数据管理基础">
+<meta property="og:url" content="http://example.com/20250603-datamanage/index.html">
 <meta property="og:site_name" content="usernamenul1&#39;s blog">
-<meta property="og:description" content="从来都没有写日记的习惯，文笔也很差。以前会思考一些可能有点哲思的东西，现在基本不了。 虽说是软件工程专业在读，但本人并不具备很多的专业知识，至少目前。因此，在这里的大部分想必是关于生活，或者是学习的过程。我想我并没有什么强烈的爱好，暂时。 在很早之前就有过搭建个人博客的想法，一直都没有实施，主要是因为没什么可写。或者是有什么可写但忘记了，或者是没有忘记但是不想提起了。或许有一个属于自己的博客可以让">
+<meta property="og:description" content="第一章 ch01 计算、数据与数据管理 人工管理，文件系统，数据库管理 ch02 几个基本概念 数据 数据库中存储的基本对象 定义：描述事物的符号记录 数据的含义称语义 数据库 定义：数据库（Database，简称DB）是长期储存在计算机内、有组织的、可共享的大量数据的集合 基本特征：  数据按一定的数据模型组织、描述和储存 可为各种用户共享 冗余度较小 数据独立性较高 易扩展  数据库管理系统">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2099-12-30T16:00:00.000Z">
-<meta property="article:modified_time" content="2025-02-18T05:51:56.361Z">
+<meta property="og:image" content="http://example.com/img/datamanage/img1.png">
+<meta property="article:published_time" content="2025-06-03T07:11:44.000Z">
+<meta property="article:modified_time" content="2025-06-03T07:13:39.914Z">
 <meta property="article:author" content="usernamenul1">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://example.com/img/datamanage/img1.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>很可能是序 - usernamenul1&#39;s blog</title>
+  <title>数据管理基础 - usernamenul1&#39;s blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -205,7 +207,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="很可能是序"></span>
+            <span id="subtitle" data-typed-text="数据管理基础"></span>
           
         </div>
 
@@ -216,8 +218,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2099-12-31 00:00" pubdate>
-          2099年12月31日 凌晨
+        <time datetime="2025-06-03 15:11" pubdate>
+          2025年6月3日 下午
         </time>
       </span>
     
@@ -228,7 +230,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          190 字
+          2.4k 字
         
       </span>
     
@@ -239,7 +241,7 @@
         
         
         
-          2 分钟
+          20 分钟
         
       </span>
     
@@ -276,14 +278,311 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">很可能是序</h1>
+            <h1 id="seo-header">数据管理基础</h1>
             
             
               <div class="markdown-body">
                 
-                <p>从来都没有写日记的习惯，文笔也很差。以前会思考一些可能有点哲思的东西，现在基本不了。</p>
-<p>虽说是软件工程专业在读，但本人并不具备很多的专业知识，至少目前。因此，在这里的大部分想必是关于生活，或者是学习的过程。我想我并没有什么强烈的爱好，暂时。</p>
-<p>在很早之前就有过搭建个人博客的想法，一直都没有实施，主要是因为没什么可写。或者是有什么可写但忘记了，或者是没有忘记但是不想提起了。或许有一个属于自己的博客可以让我说的更多，谁知道呢。</p>
+                <h2 id="第一章">第一章</h2>
+<h3 id="ch01-计算数据与数据管理">ch01 计算、数据与数据管理</h3>
+<p>人工管理，文件系统，数据库管理</p>
+<h3 id="ch02-几个基本概念">ch02 几个基本概念</h3>
+<h4 id="数据">数据</h4>
+<p>数据库中存储的基本对象</p>
+<p><strong>定义</strong>：描述事物的符号记录</p>
+<p>数据的含义称<strong>语义</strong></p>
+<h4 id="数据库">数据库</h4>
+<p><strong>定义</strong>：数据库（Database，简称DB）是长期储存在计算机内、有组织的、可共享的大量数据的集合</p>
+<p><strong>基本特征</strong>：</p>
+<ul>
+<li>数据按一定的数据模型组织、描述和储存</li>
+<li>可为各种用户共享</li>
+<li>冗余度较小</li>
+<li>数据独立性较高</li>
+<li>易扩展</li>
+</ul>
+<h4 id="数据库管理系统">数据库管理系统</h4>
+<p>数据库管理系统（Database Management System，简称DBMS）</p>
+<p><strong>定义</strong>：</p>
+<ul>
+<li>位于用户与操作系统之间的一层数据管理软件</li>
+<li>是基础软件，是一个大型复杂的软件系统</li>
+</ul>
+<p><strong>用途</strong>：科学地组织和存储数据、高效地获取和维护数据</p>
+<p><strong>主要功能</strong></p>
+<ul>
+<li>数据定义功能
+<ul>
+<li>提供数据定义语言（DDL）</li>
+<li>定义数据库中的数据对象</li>
+</ul></li>
+<li>数据组织、存储和管理
+<ul>
+<li>分类组织、存储和管理各种数据</li>
+<li>确定组织数据的文件结构和存取方式</li>
+<li>实现数据之间的联系</li>
+<li>提供多种存取方法提高存取效率</li>
+</ul></li>
+<li>数据操纵功能
+<ul>
+<li>提供数据操纵语言（DML）</li>
+<li>实现对数据库的基本操作 （查询、插入、删除和修改）</li>
+</ul></li>
+<li>数据库的事务管理和运行管理
+<ul>
+<li>数据库在建立、运行和维护时由数据库管理系统统一管理和控制</li>
+<li>保证数据的安全性、完整性、多用户对数据的并发使用</li>
+<li>发生故障后的系统恢复</li>
+</ul></li>
+</ul>
+<h4 id="数据库系统">数据库系统</h4>
+<p>l数据库系统（Database System，简称DBS）</p>
+<p>在计算机系统中引入数据库后的系统构成</p>
+<p><strong>构成</strong>：</p>
+<ul>
+<li>数据库</li>
+<li>数据库管理系统（及其应用开发工具）</li>
+<li>应用程序</li>
+<li>数据库管理员（DBA）</li>
+</ul>
+<h4 id="数据库的特点">数据库的特点</h4>
+<h5 id="数据结构化">数据结构化</h5>
+<ul>
+<li>整体结构化
+<ul>
+<li>不再仅仅针对某一个应用，而是面向全组织</li>
+<li>不仅数据内部结构化，整体是结构化的，数据之间具有联系</li>
+<li>数据记录可以变长</li>
+<li>数据的最小存取单位是数据项</li>
+</ul></li>
+<li>数据的用数据模型描述，无需应用程序定义</li>
+</ul>
+<h5
+id="数据的共享性高冗余度低且易扩充">数据的共享性高，冗余度低且易扩充</h5>
+<ul>
+<li><p>数据面向整个系统，可以被多个用户、多个应用共享使用。</p></li>
+<li><p>数据共享的好处</p>
+<ul>
+<li>减少数据冗余，节约存储空间</li>
+<li>避免数据之间的不相容性与不一致性</li>
+<li>使系统易于扩充</li>
+</ul></li>
+</ul>
+<h5 id="数据独立性高">数据独立性高</h5>
+<ul>
+<li>物理独立性
+<ul>
+<li>指用户的应用程序与数据库中数据的物理存储是相互独立的。当数据的物理存储改变了，应用程序不用改变。</li>
+</ul></li>
+<li>逻辑独立性
+<ul>
+<li>指用户的应用程序与数据库的逻辑结构是相互独立的。数据的逻辑结构改变了，应用程序不用改变。</li>
+</ul></li>
+<li>数据独立性由数据库管理系统的二级映像功能来保证。</li>
+</ul>
+<h5
+id="数据由数据管理系统统一管理和控制">数据由数据管理系统统一管理和控制</h5>
+<ul>
+<li>数据库管理系统提供的数据控制功能
+<ul>
+<li>数据的安全性（Security）保护
+<ul>
+<li>保护数据以防止不合法的使用造成的数据的泄密和破坏。</li>
+</ul></li>
+<li>数据的完整性（Integrity）检查
+<ul>
+<li>保证数据的正确性、有效性和相容性。</li>
+</ul></li>
+<li>并发（Concurrency）控制
+<ul>
+<li>对多用户的并发操作加以控制和协调，防止相互干扰而得到错误的结果。</li>
+</ul></li>
+<li>数据库恢复（Recovery）
+<ul>
+<li>将数据库从错误状态恢复到某一已知的正确状态。</li>
+</ul></li>
+</ul></li>
+</ul>
+<h3 id="ch03-数据模型">ch03 数据模型</h3>
+<h4 id="数据模型">数据模型</h4>
+<p>数据模型是对现实世界数据特征的抽象，用以<strong>抽象、表示和处理</strong>现实世界中的数据和信息</p>
+<p>数据模型应满足三方面要求</p>
+<ul>
+<li>能比较真实地模拟现实世界</li>
+<li>容易为人所理解</li>
+<li>便于在计算机上实现</li>
+</ul>
+<p>数据模型是数据库系统的核心和基础</p>
+<h4 id="概念模型信息模型">概念模型（信息模型）</h4>
+<p>按用户的观点来对数据和信息建模，用于数据库设计</p>
+<h4 id="逻辑模型">逻辑模型</h4>
+<p>按计算机系统的观点对数据建模，用于DBMS实现</p>
+<p>主要包括网状模型、层次模型、关系模型、面向对象数据模型、对象关系数据模型、半结构化数据模型等。</p>
+<h4 id="物理模型">物理模型</h4>
+<p>是对数据最底层的抽象，描述数据在系统内部的表示方式和存取方法。</p>
+<h4 id="两步抽象">两步抽象</h4>
+<ol type="1">
+<li>将显示世界中的客观对象抽象为概念模型
+<ul>
+<li>将现实世界抽象为信息世界</li>
+</ul></li>
+<li>把概念模型转换为特定DBMS支持的数据模型
+<ul>
+<li>将信息世界转换为机器世界</li>
+</ul></li>
+</ol>
+<h4 id="数据结构">数据结构</h4>
+<p>描述数据库的组成对象，以及对象之间的联系</p>
+<p><strong>内容</strong>：</p>
+<ul>
+<li>与对象的类型、内容、性质有关</li>
+<li>与数据之间联系有关</li>
+</ul>
+<p>数据结构是对系统<strong>静态特性</strong>的描述。</p>
+<h4 id="数据操作">数据操作</h4>
+<p>对数据库中各种对象（型）的实例（值）允许执行的操作的集合，包括操作及有关的操作规则</p>
+<p>数据操作是对系统<strong>动态特性</strong>的描述</p>
+<h4 id="数据完整性约束条件">数据完整性约束条件</h4>
+<ul>
+<li>数据的完整性约束条件，一组完整性规则的集合
+<ul>
+<li>完整性规则：给定的数据模型中数据及其联系所具有的制约和依存规则</li>
+<li>用以限定符合数据模型的数据库状态以及状态的变化，以保证数据的正确、有效和相容</li>
+</ul></li>
+<li>数据模型对完整性约束条件的定义
+<ul>
+<li>反映和规定必须遵守的基本的通用的完整性约束条件。</li>
+<li>提供定义完整性约束条件的机制，以反映具体应用所涉及的数据必须遵守的特定的语义约束条件。</li>
+</ul></li>
+</ul>
+<h3 id="ch04-概念模型">ch04 概念模型</h3>
+<p><strong>用途</strong>：</p>
+<ul>
+<li>概念模型用于信息世界的建模</li>
+<li>是现实世界到机器世界的一个中间层次</li>
+<li>是数据库设计的有力工具</li>
+<li>数据库设计人员和用户之间进行交流的语言</li>
+</ul>
+<p><strong>基本要求</strong>：</p>
+<ul>
+<li>较强的语义表达能力</li>
+<li>简单、清晰、易于用户理解</li>
+</ul>
+<h4 id="实体-entity">实体 Entity</h4>
+<ul>
+<li>客观存在并可互相区别的事物</li>
+<li>可以是具体的人、事、物或抽象的概念</li>
+</ul>
+<h4 id="属性-attribute">属性 Attribute</h4>
+<ul>
+<li>实体所具有的某一特性</li>
+<li>一个实体可以有若干个属性</li>
+</ul>
+<h4 id="码-key">码 Key</h4>
+<ul>
+<li>唯一标识实体的属性</li>
+</ul>
+<h4 id="实体型-entity-type">实体型 Entity Type</h4>
+<ul>
+<li>用实体名及其属性名集合来抽象和刻画同类实体称为实体型</li>
+</ul>
+<h4 id="实体集-entity-set">实体集 Entity Set</h4>
+<ul>
+<li>同一类型实体的集合称为实体集</li>
+</ul>
+<h4 id="联系-relationship">联系 Relationship</h4>
+<ul>
+<li>现实世界中事物内部以及事物之间的联系在信息世界中反映为实体（型）内部的联系和实体（型）之间的联系。</li>
+</ul>
+<h5 id="实体之间的联系">实体之间的联系</h5>
+<h5 id="实体内部的联系">实体内部的联系</h5>
+<h4 id="实体-联系方法-entity-relationship-approach">实体-联系方法
+Entity-Relationship Approach</h4>
+<p>E-R图 <img src="../img/datamanage/img1.png" srcset="/img/loading.gif" lazyload /> <img
+src="../img/datamanage/img2.png" srcset="/img/loading.gif" lazyload /> <img
+src="../img/datamanage/img3.png" srcset="/img/loading.gif" lazyload /> <img
+src="../img/datamanage/img4.png" srcset="/img/loading.gif" lazyload /> <img
+src="../img/datamanage/img5.png" srcset="/img/loading.gif" lazyload /></p>
+<h3 id="ch05-逻辑模型">ch05 逻辑模型</h3>
+<h4 id="常用数据模型">常用数据模型</h4>
+<ul>
+<li>格式化模型
+<ul>
+<li>层次模型</li>
+<li>网状模型</li>
+</ul></li>
+<li>关系模型</li>
+<li>对象模型
+<ul>
+<li>面向对象数据模型</li>
+<li>对象关系数据模型</li>
+</ul></li>
+</ul>
+<h4 id="关系-relation">关系 Relation</h4>
+<p>一个关系对应通常说的一张表</p>
+<h4 id="元组-tuple">元组 Tuple</h4>
+<p>表中的一行即为一个元组</p>
+<h4 id="属性-attribute-1">属性 Attribute</h4>
+<p>表中的一列即为一个属性，给每一个属性起一个名称即属性名</p>
+<h4 id="主码-key">主码 Key</h4>
+<p>也称码键。表中的某个属性组，它可以唯一确定一个元组</p>
+<h4 id="域-domain">域 Domain</h4>
+<p>是一组具有相同数据类型的值的集合。属性的取值范围来自某个域。</p>
+<h4 id="分量">分量</h4>
+<p>元组中的一个属性值。</p>
+<h4 id="关系模式">关系模式</h4>
+<ul>
+<li>对关系的描述</li>
+<li>关系名（属性1，属性2，…，属性n）</li>
+<li>学生（学号，姓名，年龄，性别，系名，年级）</li>
+</ul>
+<p>关系必须是规范化的，满足一定的规范条件</p>
+<ul>
+<li>最基本的规范条件：关系的每一个分量必须是一个不可分的数据项,
+不允许表中还有表</li>
+</ul>
+<h4 id="关系模型的操作与完整性约束">关系模型的操作与完整性约束</h4>
+<ul>
+<li><p>数据操作（查询、插入、删除、更新）是集合操作，操作对象和操作结果都是关系</p></li>
+<li><p>存取路径对用户隐蔽，用户只要指出“干什么”，不必详细说明“怎么干”</p></li>
+<li><p>关系的完整性约束条件</p>
+<ul>
+<li>实体完整性</li>
+<li>参照完整性</li>
+<li>用户定义的完整性</li>
+</ul></li>
+</ul>
+<h4 id="优点">优点</h4>
+<ul>
+<li>建立在严格的数学概念的基础上</li>
+<li>概念单一
+<ul>
+<li>实体和各类联系都用关系来表示</li>
+<li>对数据的检索结果也是关系</li>
+</ul></li>
+<li>关系模型的存取路径对用户透明
+<ul>
+<li>具有更高的数据独立性，更好的安全保密性</li>
+<li>简化了程序员的工作和数据库开发建立的工作</li>
+</ul></li>
+</ul>
+<h4 id="缺点">缺点</h4>
+<ul>
+<li>存取路径对用户透明，查询效率往往不如格式化数据模型</li>
+<li>为提高性能，必须对用户的查询请求进行优化，增加了开发DBMS的难度</li>
+</ul>
+<h4 id="nosql">NoSQL</h4>
+<ul>
+<li>基于Key-Value存储模型</li>
+<li>基于文档模型</li>
+<li>列族模型</li>
+<li>基于图模型
+<ul>
+<li>记为G (V, E)，V为结点(node) 集合，每个结点具有若干属性，E为边(edge)
+集合，也可以具有若干属性。</li>
+</ul></li>
+</ul>
+<h3 id="ch06-数据库系统的结构">ch06 数据库系统的结构</h3>
 
                 
               </div>
@@ -302,7 +601,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E5%BA%8F/" class="category-chain-item">序</a>
+  <a href="/categories/%E8%AF%BE%E7%A8%8B/" class="category-chain-item">课程</a>
   
   
 
@@ -324,12 +623,18 @@
                   <article class="post-prev col-6">
                     
                     
+                      <a href="/20991231-theFirst/" title="很可能是序">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">很可能是序</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/20250603-datamanage/" title="数据管理基础">
-                        <span class="hidden-mobile">数据管理基础</span>
+                      <a href="/20250518-maybepresent/" title="现在吗">
+                        <span class="hidden-mobile">现在吗</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
