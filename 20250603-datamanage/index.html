@@ -22,13 +22,13 @@
     <meta name="description" content="第一章 ch01 计算、数据与数据管理 人工管理，文件系统，数据库管理 ch02 几个基本概念 数据 数据库中存储的基本对象 定义：描述事物的符号记录 数据的含义称语义 数据库 定义：数据库（Database，简称DB）是长期储存在计算机内、有组织的、可共享的大量数据的集合 基本特征：  数据按一定的数据模型组织、描述和储存 可为各种用户共享 冗余度较小 数据独立性较高 易扩展  数据库管理系统">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数据管理基础">
-<meta property="og:url" content="http://example.com/20250603-datamanage-myserver-safeBackup-0002/index.html">
+<meta property="og:url" content="http://example.com/20250603-datamanage/index.html">
 <meta property="og:site_name" content="usernamenul1&#39;s blog">
 <meta property="og:description" content="第一章 ch01 计算、数据与数据管理 人工管理，文件系统，数据库管理 ch02 几个基本概念 数据 数据库中存储的基本对象 定义：描述事物的符号记录 数据的含义称语义 数据库 定义：数据库（Database，简称DB）是长期储存在计算机内、有组织的、可共享的大量数据的集合 基本特征：  数据按一定的数据模型组织、描述和储存 可为各种用户共享 冗余度较小 数据独立性较高 易扩展  数据库管理系统">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/img/datamanage/img1.png">
 <meta property="article:published_time" content="2025-06-03T07:11:44.000Z">
-<meta property="article:modified_time" content="2025-06-07T14:07:43.000Z">
+<meta property="article:modified_time" content="2025-06-08T08:19:53.000Z">
 <meta property="article:author" content="usernamenul1">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="http://example.com/img/datamanage/img1.png">
@@ -230,7 +230,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          4.5k 字
+          5.1k 字
         
       </span>
     
@@ -241,7 +241,7 @@
         
         
         
-          38 分钟
+          43 分钟
         
       </span>
     
@@ -843,6 +843,106 @@ User）。最终用户通过应用系统的用户接口使用数据库。</p>
 </ul></li>
 </ul></li>
 </ul>
+<h2 id="第二章">第二章</h2>
+<h3 id="ch08-关系关系模式和关系数据库">ch08
+关系、关系模式和关系数据库</h3>
+<h4 id="域-domain-1">域 Domain</h4>
+<ul>
+<li>域是一组具有相同数据类型的值的集合。例:
+<ul>
+<li>整数</li>
+<li>实数</li>
+<li>介于某个取值范围的整数</li>
+<li>指定长度的字符串集合</li>
+<li>{‘男’，‘女’}</li>
+<li>……………..</li>
+</ul></li>
+</ul>
+<h4 id="笛卡尔积-cartesian-product">笛卡尔积 Cartesian Product</h4>
+<ul>
+<li><p>笛卡尔积（Cartesian Product）</p>
+<ul>
+<li>给定一组域<span class="math inline">\(D_1, D_2, ...,
+D_n\)</span>，允许其中某些域是相同的。</li>
+<li><span class="math inline">\(D_1, D_2, ...,
+D_n\)</span>的笛卡尔积为<span class="math inline">\(D_1 * D_2* ...* D_n
+= \{(d_1, d_2, ... , d_n) | d_i\in D_i, i=1,2,...,n\}\)</span></li>
+<li>所有域的所有取值的一个组合</li>
+<li>不能重复</li>
+</ul></li>
+<li><p>元组（Tuple）</p>
+<ul>
+<li>笛卡尔积中每一个元素<span class="math inline">\((d_1, d_2,
+...,d_n)\)</span>叫作一个n元组（n-tuple）或简称元组</li>
+</ul></li>
+<li><p>分量（Component）</p>
+<ul>
+<li>笛卡尔积元素<span class="math inline">\((d_1, d_2,...,
+d_n)\)</span>中的每一个值<span
+class="math inline">\(d_i\)</span>叫作一个分量</li>
+</ul></li>
+<li><p>基数（Cardinal number）</p>
+<ul>
+<li>若<span class="math inline">\(D_i(i =
+1,2,...,n)\)</span>为有限集，其基数为<span class="math inline">\(m_i(i =
+1,2,...,n)\)</span>则<span
+class="math inline">\(D_1*D_2*...*D_n\)</span>的基数<span
+class="math inline">\(M\)</span>为： <span class="math display">\[
+M=\prod_{i=1}^nm_i
+\]</span></li>
+</ul></li>
+<li><p>笛卡尔积的表示方法</p>
+<ul>
+<li>笛卡尔积可表示为一张二维表</li>
+<li>表中的每行对应一个元组，表中的每列对应一个域</li>
+</ul></li>
+</ul>
+<h4 id="关系-relation-1">关系 Relation</h4>
+<ul>
+<li><span class="math inline">\(D_1 * D_2* ...*
+D_n\)</span>的子集叫作在域<span class="math inline">\(D_1, D_2, ...,
+D_n\)</span>的关系，表示为<span class="math inline">\(R(D_1, D_2, ...,
+D_n)\)</span>
+<ul>
+<li><span class="math inline">\(R\)</span>：关系名</li>
+<li><span class="math inline">\(n\)</span>：关系的目或度
+<ul>
+<li>当<span
+class="math inline">\(n=1\)</span>时，称该关系为单元关系或一元关系</li>
+<li>当<span
+class="math inline">\(n=2\)</span>时，称该关系为二元关系</li>
+</ul></li>
+</ul></li>
+<li>关系的表示
+<ul>
+<li>关系也是一个二维表，表的每行对应一个元组，表的每列对应一个域</li>
+</ul></li>
+<li>属性
+<ul>
+<li>关系中不同列可以对应相同的域</li>
+<li>为了加以区分，必须对每列起一个名字，称为属性（Attribute）</li>
+<li><em>n</em>目关系必有<em>n</em>个属性</li>
+</ul></li>
+<li>码
+<ul>
+<li>候选码（Candidate key）
+<ul>
+<li>若关系中的某一属性组的值能唯一地标识一个元组，而其子集不能，则称该属性组为候选码</li>
+<li>简单的情况：候选码只包含一个属性</li>
+<li>最极端的情况：关系模式的所有属性组是这个关系模式的候选码，称为全码（All-key）</li>
+</ul></li>
+<li>主码
+<ul>
+<li>若一个关系有多个候选码，则选定其中一个为主码（Primary key）</li>
+</ul></li>
+<li>主属性
+<ul>
+<li>候选码的诸属性称为主属性（Prime attribute）</li>
+<li>不包含在任何侯选码中的属性称为非主属性（Non-Prime
+attribute）或非码属性（Non-key attribute）</li>
+</ul></li>
+</ul></li>
+</ul>
 
                 
               </div>
@@ -883,9 +983,9 @@ User）。最终用户通过应用系统的用户接口使用数据库。</p>
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/20250603-datamanage-myserver-safeBackup-0001/" title="数据管理基础">
+                      <a href="/20991231-theFirst/" title="很可能是序">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">数据管理基础</span>
+                        <span class="hidden-mobile">很可能是序</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
